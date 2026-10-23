@@ -1,33 +1,9 @@
-.cards-container{
+.cards{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-    justify-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.card {
-    cursor: pointer;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 80px 0 80px 0 !important;
-    transition: all 0.3s ease-in-out !important;
-}
-.card:hover {
-    transform: translateY(-30px) !important;
-}
-
-@media (max-width: 1062px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 718px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 183px) {
-    .card{
-        border-radius: 10px !important;
-    }
+    gap: 20px;
 }

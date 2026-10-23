@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -17,7 +16,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact', 'Services', 'Blog'];
+const navItems = ['Home', 'About', 'Contact', 'Features', 'Products'];
 
 export default function Navbar(props) {
   const { window } = props;
@@ -33,7 +32,7 @@ export default function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        React
       </Typography>
 
       <Divider />
@@ -63,9 +62,6 @@ export default function Navbar(props) {
 
       <AppBar
         component="nav"
-        sx={{
-          backgroundColor: 'rgb(64, 62, 62)',
-        }}
       >
         <Toolbar>
           <IconButton

@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 .footer{
     text-align: center;
-    font-weight: bold;
-    font-family: 'Poppins';
-    background-color: rgb(64, 62, 62);
-    color: white;
     padding: 20px;
-    position: relative;
-    bottom: 0;
+    background-color: blue;
+    color: white;
 }

@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Container from './Components/Container/Container';
 import Footer from './Components/Footer/Footer';
 import CustomCard from './Components/Card/Card';
-import Features from './Components/Features/Features';
+import Section from './Components/Section/Section';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './About/About';
 
@@ -13,21 +13,18 @@ function App() {
     <div className="App">
     <BrowserRouter>
       <Navbar />
-
       <Routes>
         <Route
           path="/"
           element={
             <Container>
               <CustomCard />
-              <Features />
+              <Section/>
             </Container>
           }
         />
-
         <Route path="/about" element={<About />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   </div>

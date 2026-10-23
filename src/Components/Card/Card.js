@@ -1,43 +1,69 @@
+
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
 import card_1 from '../../assets/card_1.jpg';
 import './Card.css';
 
-const cards = [1, 2, 3, 4, 5, 6];
+const cards = [
+  {
+    title: 'Lizard',
+    description: 'Lizards are a widespread group of reptiles.',
+  },
+  {
+    title: 'Animals',
+    description: 'Discover different types of animals.',
+  },
+  {
+    title: 'Nature',
+    description: 'Explore the beauty of nature.',
+  },
+  {
+    title: 'Wildlife',
+    description: 'Learn about wildlife around the world.',
+  },
+  {
+    title: 'Reptiles',
+    description: 'Discover amazing reptiles.',
+  },
+  {
+    title: 'Birds',
+    description: 'Learn about different bird species.',
+  },
+];
 
 export default function CustomCard() {
   return (
-    <>
-    <div className='cards-container'>
-  {cards.map((card) =>  (
-    <Card className='card' key={card} sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image= {card_1}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    
-  ))}
-</div>
-    </>
+    <div className="cards">
+      {cards.map((item, index) => (
+        <Card className="custom-card" key={index}>
+          <CardMedia
+            component="img"
+            height="180"
+            image={card_1}
+            alt={item.title}
+          />
+
+          <CardContent>
+            <Typography variant="h5" gutterBottom>
+              {item.title}
+            </Typography>
+
+            <Typography variant="body2" color="text.secondary">
+              {item.description}
+            </Typography>
+          </CardContent>
+
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      ))}
+    </div>
   );
 }
