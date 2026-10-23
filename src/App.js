@@ -5,8 +5,8 @@ import Footer from './Components/Footer/Footer';
 import CustomCard from './Components/Card/Card';
 import Section from './Components/Section/Section';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './About/About';
-
+import About from './Components/About/About'
+import Home from './Home';
 
 function App() {
   return (
@@ -17,10 +17,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Container>
-              <CustomCard />
-              <Section/>
-            </Container>
+            <Home/>
           }
         />
         <Route path="/about" element={<About />} />

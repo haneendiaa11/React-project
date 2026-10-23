@@ -57,13 +57,8 @@ export default function CustomCard() {
               {item.description}
             </Typography>
           </CardContent>
-
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
-          </CardActions>
         </Card>
       ))}
-    </div>
+    </div>              
   );
 }

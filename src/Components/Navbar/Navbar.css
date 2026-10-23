@@ -1,0 +1,31 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1976d2;
+  color: white;
+  padding: 15px 25px;
+  margin-bottom: 40px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+  .links {
+    display: none;
+  }
+}
